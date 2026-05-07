@@ -6,7 +6,9 @@ import os
 
 app = Flask(__name__)
 CORS(app)
-
+@app.route('/')
+def home():
+    return jsonify({"message": "Backend running"})
 def load_suspicious_data():
     """Load and return the suspicious output data."""
     csv_path = os.path.join(os.path.dirname(__file__), '..', 'suspicious_output.csv')
