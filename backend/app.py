@@ -2,13 +2,15 @@ from flask import Flask, jsonify
 import pandas as pd
 from flask_cors import CORS
 from collections import Counter
+import os
 
 app = Flask(__name__)
 CORS(app)
 
 def load_suspicious_data():
     """Load and return the suspicious output data."""
-    df = pd.read_csv('../suspicious_output.csv')
+    csv_path = os.path.join(os.path.dirname(__file__), '..', 'suspicious_output.csv')
+    df = pd.read_csv(csv_path)
     df['eventTime'] = pd.to_datetime(df['eventTime'])
     return df
 
@@ -113,4 +115,5 @@ def get_analytics():
     })
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=False)

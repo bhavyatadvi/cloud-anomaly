@@ -1,0 +1,22 @@
+eventTime,eventName_raw,sourceIPAddress,userIdentityuserName,userIdentitytype,risk_score,reason
+2017-02-12 20:03:24+00:00,PutBucketPolicy,9385,Unknown,Root,7.0,Potential data destruction: Root user modifying bucket security policies
+2017-02-12 20:03:25+00:00,StartLogging,6373,Unknown,Root,7.0,Audit evasion: Root tampering with CloudTrail logging configuration
+2017-02-12 20:58:26+00:00,CreateUser,6373,Unknown,Root,7.0,Privilege escalation: Root creating new IAM users and access keys
+2017-02-12 20:58:27+00:00,AttachUserPolicy,6373,Unknown,Root,7.0,Privilege escalation: Root creating new IAM users and access keys
+2017-02-12 20:58:27+00:00,CreateAccessKey,6373,Unknown,Root,7.0,Privilege escalation: Root creating new IAM users and access keys
+2017-02-12 21:30:56+00:00,DeleteBucket,9385,Unknown,Root,7.0,Potential data destruction: Root user modifying bucket security policies
+2017-02-12 22:19:13+00:00,PutBucketPolicy,6373,Unknown,Root,7.0,Potential data destruction: Root user modifying bucket security policies
+2017-02-20 01:15:34+00:00,GetRestApi,6373,Unknown,Root,7.3,Root account compromise: Failed operations with anomalies during off-hours
+2017-02-20 01:18:55+00:00,GetStages,6373,Unknown,Root,7.3,Root account compromise: Failed operations with anomalies during off-hours
+2017-02-20 01:19:11+00:00,GetMethod,6373,Unknown,Root,7.3,Root account compromise: Failed operations with anomalies during off-hours
+2017-02-20 01:19:11+00:00,GetMethodResponse,6373,Unknown,Root,7.3,Root account compromise: Failed operations with anomalies during off-hours
+2017-02-20 01:19:11+00:00,GetIntegration,6373,Unknown,Root,7.3,Root account compromise: Failed operations with anomalies during off-hours
+2017-02-24 01:52:43+00:00,GetBucketReplication,9385,Unknown,Root,7.3,Root account compromise: Failed operations with anomalies during off-hours
+2017-02-27 00:24:36+00:00,CreateDeployment,6373,Unknown,Root,7.3,Root account compromise: Failed operations with anomalies during off-hours
+2017-05-29 19:52:00+00:00,DeleteBucket,6373,Unknown,Root,7.0,Potential data destruction: Root user modifying bucket security policies
+2018-03-20 00:21:24+00:00,GetAccountPasswordPolicy,3633,flaws,Root,7.3,Root account compromise: Failed operations with anomalies during off-hours
+2018-07-05 20:15:12+00:00,CreateAccessKey,4821,flaws,Root,7.0,Privilege escalation: Root creating new IAM users and access keys
+2018-10-02 16:22:36+00:00,CreateUser,2522,flaws,Root,7.0,Privilege escalation: Root creating new IAM users and access keys
+2018-10-02 16:22:36+00:00,CreateAccessKey,2522,flaws,Root,7.0,Privilege escalation: Root creating new IAM users and access keys
+2018-10-03 01:59:40+00:00,GetAccountPasswordPolicy,2522,flaws,Root,7.3,Root account compromise: Failed operations with anomalies during off-hours
+2019-03-03 16:43:14+00:00,AttachUserPolicy,2575,flaws,Root,7.0,Privilege escalation: Root creating new IAM users and access keys
