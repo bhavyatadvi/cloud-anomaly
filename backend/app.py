@@ -6,9 +6,7 @@ import os
 
 app = Flask(__name__)
 CORS(app)
-@app.route('/')
-def home():
-    return jsonify({"message": "Backend running"})
+
 def load_suspicious_data():
     """Load and return the suspicious output data."""
     csv_path = os.path.join(os.path.dirname(__file__), '..', 'suspicious_output.csv')
@@ -115,7 +113,9 @@ def get_analytics():
         'threat_breakdown': threat_breakdown,
         'hourly_activity': hourly,
     })
-
+@app.route('/')
+def home():
+    return jsonify({"message": "Backend running"})
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port, debug=False)
